@@ -11,11 +11,9 @@ function App() {
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if(storedTodos) setTodos(storedTodos)
-    console.log(storedTodos)
   }, []) 
 
   useEffect(() => {
-    console.log("useeff")
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
 
@@ -46,7 +44,8 @@ function handleClearTodo(){
     <div class="grid h-screen place-items-center">
       <div class="bg-sky-200 p-5 h-4/6 w-1/5">
         <h1 class="text-center p-1">To do List</h1>
-        <div class="w-full">
+
+        <div class="w-full py-3">
           <label for="small-input" class="">Add new task: </label>
           <div class="flex items-end">
             <input type="text" id="small-input" ref={todoNameRef} class="block w-full p-2 border border-gray-300 rounded-lg" />
@@ -56,14 +55,17 @@ function handleClearTodo(){
           </div>
         </div>
         
-        <div>
+        <div class="bg-gray-300 px-3 pb-3 h-4/6 overflow-y-auto py-3">
+          <TodoList todos={todos} toggleTodo={toggleTodo}/>
         </div>
 
-        <TodoList todos={todos} toggleTodo={toggleTodo}/>
-        <div class="w-full flex items-end">
-          <div class="w-1/2 text-end">{todos.filter(todo => !todo.completed).length} left todo</div>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded-full" onClick={handleClearTodo}>Clear Completed</button>
+        <div class="w-full py-3">
+          <div class="text-end">{todos.filter(todo => !todo.completed).length} left todo</div>
+          <div class="text-end py-1">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded-full" onClick={handleClearTodo}>Clear Completed</button>
+          </div>
         </div>
+
       </div>
     </div>
   </>
