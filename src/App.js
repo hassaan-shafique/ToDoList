@@ -38,15 +38,19 @@ function handleAllClearTodo(){
   <>
     <div class="grid h-screen place-items-center"> 
       <div class="bg-violet-400 p-5 h-4/6 w-3/5">
-        <h1 class="text-center font-bold text-xl font-sans underline p-1"> CARE To do List</h1>
+      <button>  <h1 class=" flex ml-[14rem]  text-center font-bold text-xl font-sans underline p-1"> CARE To do List</h1>
+        </button>
+        
 
         <div class="w-full py-3">  
          
           <div class="flex items-end">
             <input type="text" id="small-input" ref={todoNameRef}  placeholder="Add New Task Here" class="block w-full p-2 border border-gray-300 rounded-lg" />
+    
             <div class="m-1">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded-full" onClick={handleAddTodo}>Add</button>
+              <button  class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded-full"  onClick={handleAddTodo}>Add</button>
             </div>
+
           </div>
         </div>
         
