@@ -38,7 +38,7 @@ function handleAllClearTodo(){
   <>
     <div class="grid h-screen place-items-center"> 
       <div class="bg-violet-400 p-5 h-4/6 w-3/5">
-      <button>  <h1 class=" flex ml-[14rem]  text-center font-bold text-xl font-sans underline p-1"> CARE To do List</h1>
+      <button>  <h1 class=" flex ml-[14rem] r text-center font-bold text-xl font-sans underline p-1"> CARE To do List</h1>
         </button>
         
 
