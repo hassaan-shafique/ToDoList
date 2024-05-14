@@ -29,6 +29,7 @@ function handleClearTodo(){
   const newTodos = todos.filter(todo => !todo.completed)
   setTodos(newTodos)
 }
+
 function handleAllClearTodo(){
   // []updates the state with an empty array,leading to re-render the components and removal of all todos from UI
   setTodos([]);
@@ -37,9 +38,9 @@ function handleAllClearTodo(){
   return ( 
   <>
     <div class="grid h-screen place-items-center"> 
-      <div class="bg-violet-400 p-5 h-4/6 w-3/5">
-      <button>  <h1 class=" flex ml-[14rem] r text-center font-bold text-xl font-sans underline p-1"> CARE To do List</h1>
-        </button>
+      <div class="bg-violet-400 p-5 h-4/6 w-3/4">
+        <h1 class=" flex ml-[20rem]  text-center font-bold text-xl font-sans "> Hassaan's To do List</h1>
+       
         
 
         <div class="w-full py-3">  
